@@ -1,17 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
-import Navbar from "../components/Navbar"
+import Layout from "../components/Layout"
+import { ExampleButton } from "../components/Button"
 
 const indexPage = () => {
   return (
-    <div>
-      <Navbar />
-      <div>Hello World!!!</div>
-      <div>
-        <Link to="/blog">blog page</Link>
-      </div>
-      <a target="_blank" href="https://gatsbyjs.com">gatsby docs</a>
-    </div>
+    <Layout>
+      <h1>Hello from Gatsby</h1>
+      <ExampleButton>Click Me!</ExampleButton>
+    </Layout>
   )
 }
 
