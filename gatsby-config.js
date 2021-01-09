@@ -1,6 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "tutorial",
+    title: "Gatsby Tutorial",
+    description: "Some random description",
+    author: "@johndoe",
+    data: ["item 1", "item 2"],
+    person: { name: "peter", age: 32 },
   },
   plugins: [
     {
@@ -10,4 +14,4 @@ module.exports = {
       },
     },
   ],
-};
+}
