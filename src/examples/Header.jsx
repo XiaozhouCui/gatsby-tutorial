@@ -5,7 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 const getData = graphql`
   {
     site {
-      siteMetadata {
+      # info is the alias for siteMetadata
+      info: siteMetadata {
         author
         data
         description
@@ -22,7 +23,8 @@ const Header = () => {
   // nested destructuring from gql data
   const {
     site: {
-      siteMetadata: {
+      // info is the alias for siteMetadata
+      info: {
         title,
         person: { name },
       },
