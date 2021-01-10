@@ -37,6 +37,9 @@ p {
   max-width: 1170px;
   margin: 3rem auto;
 }
+.single-product p {
+  text-align: justify;
+}
 
 @media screen and (min-width: 768px) {
   .single-product {
