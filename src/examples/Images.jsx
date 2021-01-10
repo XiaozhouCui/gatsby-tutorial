@@ -21,6 +21,14 @@ const getImages = graphql`
         }
       }
     }
+    example: file(relativePath: { eq: "image-1.jpg" }) {
+      childImageSharp {
+        # default 800
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
   }
 `
 
@@ -31,7 +39,7 @@ const Images = () => {
     <section className="images">
       <article className="single-image">
         <h3>basic image</h3>
-        <img src={img} width="100%" />
+        <img src={img} width="100%" alt="old img tag" />
       </article>
       <article className="single-image">
         <h3>fixed image/blur</h3>
